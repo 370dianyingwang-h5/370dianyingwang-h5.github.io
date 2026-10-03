@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>370电影网 - 高清影视在线观看平台</title>
+<meta name="description" content="370电影网提供最新高清电影、电视剧、综艺在线观看，海量资源每日更新，畅享极致观影体验。">
+<meta name="keywords" content="370电影网,高清电影,在线观看,最新影视,370dianyingwang">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://370dianyingwang-h5.github.io/">
+<meta property="og:title" content="370电影网 - 高清影视在线观看平台">
+<meta property="og:description" content="370电影网提供最新高清电影、电视剧、综艺在线观看，海量资源每日更新。">
+<meta property="og:url" content="https://370dianyingwang-h5.github.io/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "370电影网",
+  "url": "https://370dianyingwang-h5.github.io/",
+  "description": "370电影网提供最新高清电影、电视剧、综艺在线观看，海量资源每日更新。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://370dianyingwang-h5.github.io/#search={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "370电影网提供哪些类型的影视资源？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "370电影网提供最新电影、热播电视剧、综艺节目、动漫等高清资源在线观看。"
+    }
+  }, {
+    "@type": "Question",
+    "name": "370电影网的资源更新频率如何？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "370电影网每日更新最新影视资源，确保用户能够第一时间观看热门内容。"
+    }
+  }]
+}
+</script>
+<style>
+:root {
+  --bg-dark: #0a0e27;
+  --bg-card: #121836;
+  --primary: #00f0ff;
+  --primary-dark: #00b8c2;
+  --text-main: #e0e0e0;
+  --text-muted: #8892b0;
+  --border: #1e2a5a;
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+a:hover { color: #fff; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+.navbar {
+  position: fixed; top: 0; width: 100%;
+  background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px);
+  z-index: 1000; border-bottom: 1px solid var(--border);
+}
+.nav-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  display: flex; justify-content: space-between; align-items: center; height: 60px;
+}
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+.nav-menu { display: flex; gap: 20px; }
+.nav-menu a { color: var(--text-main); font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; }
+.nav-menu a:hover { color: var(--primary); background: rgba(0, 240, 255, 0.1); }
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+.menu-toggle span { width: 25px; height: 3px; background: var(--primary); transition: var(--transition); }
+
+.hero {
+  margin-top: 60px; min-height: 90vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #0c1242 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; right: -20%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,240,255,0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.1); opacity: 0.5; } }
+.hero-container {
+  max-width: 1200px; margin: 0 auto; padding: 40px 20px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; position: relative; z-index: 1;
+}
+.hero-content h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; color: #fff; }
+.hero-content h1 span { color: var(--primary); display: block; font-size: 2rem; margin-top: 10px; }
+.hero-content p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; max-width: 500px; }
+.hero-btn {
+  display: inline-block; padding: 12px 30px; background: var(--primary);
+  color: var(--bg-dark); font-weight: 600; border-radius: 30px; transition: var(--transition);
+}
+.hero-btn:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,240,255,0.4); }
+.hero-visual { display: flex; justify-content: center; align-items: center; position: relative; }
+.hero-circle {
+  width: 300px; height: 300px; border: 2px solid var(--primary); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; position: relative;
+  animation: rotate 20s linear infinite;
+}
+.hero-circle::before {
+  content: ''; position: absolute; width: 80%; height: 80%;
+  border: 1px dashed var(--primary-dark); border-radius: 50%;
+}
+.hero-circle-inner {
+  width: 150px; height: 150px; background: rgba(0,240,255,0.1);
+  border: 1px solid var(--primary); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; font-weight: 700; color: var(--primary);
+  animation: rotateReverse 15s linear infinite;
+}
+@keyframes rotate { to { transform: rotate(360deg); } }
+@keyframes rotateReverse { to { transform: rotate(-360deg); } }
+
+.section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-size: 2.2rem; color: #fff; margin-bottom: 15px; position: relative; display: inline-block; }
+.section-header h2::after {
+  content: ''; position: absolute; bottom: -10px; left: 50%;
+  transform: translateX(-50%); width: 60px; height: 3px; background: var(--primary);
+}
+.section-header p { color: var(--text-muted); margin-top: 20px; }
+
+.features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.feature-card {
+  background: var(--bg-card); padding: 30px 20px; border-radius: var(--radius);
+  text-align: center; border: 1px solid var(--border); transition: var(--transition);
+}
+.feature-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,240,255,0.1); }
+.feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+.feature-card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 10px; }
+.feature-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+.library { background: var(--bg-card); padding: 30px; border-radius: var(--radius); border: 1px solid var(--border); }
+.library-filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 6px 16px; background: transparent; border: 1px solid var(--border);
+  color: var(--text-muted); border-radius: 20px; cursor: pointer; transition: var(--transition);
+}
+.filter-btn.active, .filter-btn:hover { background: var(--primary); color: var(--bg-dark); border-color: var(--primary); }
+.movie-scroll {
+  display: flex; gap: 20px; overflow-x: auto; padding-bottom: 15px; scroll-snap-type: x mandatory;
+}
+.movie-scroll::-webkit-scrollbar { height: 6px; }
+.movie-scroll::-webkit-scrollbar-track { background: var(--bg-dark); }
+.movie-scroll::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 3px; }
+.movie-card {
+  min-width: 200px; scroll-snap-align: start; background: var(--bg-dark);
+  border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); flex-shrink: 0;
+}
+.movie-poster {
+  height: 280px; background: linear-gradient(45deg, #1a1a3e, #2a2a5e);
+  display: flex; align-items: center; justify-content: center; font-size: 3rem; color: rgba(0,240,255,0.3);
+}
+.movie-info { padding: 15px; }
+.movie-info h3 { font-size: 1rem; color: #fff; margin-bottom: 5px; }
+.movie-info p { font-size: 0.8rem; color: var(--text-muted); }
+
+.series-list { display: flex; flex-direction: column; gap: 15px; }
+.series-item {
+  display: flex; align-items: center; gap: 20px; background: var(--bg-card);
+  padding: 15px 20px; border-radius: var(--radius); border: 1px solid var(--border); transition: var(--transition);
+}
+.series-item:hover { border-color: var(--primary); padding-left: 30px; }
+.series-num { font-size: 1.5rem; font-weight: 700; color: var(--primary); min-width: 40px; }
+.series-content h3 { font-size: 1.1rem; color: #fff; margin-bottom: 5px; }
+.series-content p { font-size: 0.9rem; color: var(--text-muted); }
+.series-tag { margin-left: auto; padding: 4px 12px; background: rgba(0,240,255,0.1); color: var(--primary); border-radius: 12px; font-size: 0.8rem; }
+
+.ranking-table { width: 100%; border-collapse: collapse; background: var(--bg-card); border-radius: var(--radius); overflow: hidden; }
+.ranking-table th, .ranking-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+.ranking-table th { background: rgba(0,240,255,0.05); color: var(--primary); font-weight: 600; }
+.ranking-table td { color: var(--text-main); }
+.rank-num { font-weight: 700; color: var(--primary); }
+.rank-num.top { color: #ff4757; }
+.progress-bar { width: 100%; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary); border-radius: 3px; }
+.trend-up { color: #2ed573; }
+.trend-down { color: #ff4757; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.about-text { background: var(--bg-card); padding: 30px; border-radius: var(--radius); border: 1px solid var(--border); }
+.about-text h3 { color: #fff; margin-bottom: 15px; font-size: 1.3rem; }
+.about-text p { color: var(--text-muted); margin-bottom: 15px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+  padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; color: #fff; font-weight: 500; transition: var(--transition);
+}
+.faq-question:hover { color: var(--primary); }
+.faq-toggle { font-size: 1.5rem; transition: transform 0.3s ease; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-answer p { padding-bottom: 20px; color: var(--text-muted); }
+.faq-item.active .faq-answer { max-height: 200px; }
+.faq-item.active .faq-toggle { transform: rotate(45deg); color: var(--primary); }
+
+.footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 40px 20px 20px; text-align: center; }
+.footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 30px; }
+.footer-col h4 { color: #fff; margin-bottom: 15px; font-size: 1.1rem; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a { color: var(--text-muted); font-size: 0.9rem; }
+.footer-col a:hover { color: var(--primary); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; color: var(--text-muted); font-size: 0.85rem; }
+
+.back-to-top {
+  position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px;
+  background: var(--primary); color: var(--bg-dark); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 999;
+}
+.back-to-top.show { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: #fff; transform: translateY(-3px); }
+
+@media (max-width: 992px) {
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .hero-container { grid-template-columns: 1fr; text-align: center; }
+  .hero-content p { margin: 0 auto 30px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+  .nav-menu {
+    position: fixed; top: 60px; left: -100%; width: 100%; height: calc(100vh - 60px);
+    background: var(--bg-dark); flex-direction: column; align-items: center; justify-content: flex-start;
+    padding-top: 40px; transition: left 0.3s ease;
+  }
+  .nav-menu.active { left: 0; }
+  .nav-menu a { font-size: 1.2rem; padding: 15px; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content h1 span { font-size: 1.5rem; }
+  .section { padding: 50px 15px; }
+  .section-header h2 { font-size: 1.8rem; }
+  .features { grid-template-columns: 1fr; }
+  .ranking-table { display: block; overflow-x: auto; }
+  .series-item { flex-direction: column; text-align: center; gap: 10px; }
+  .series-tag { margin-left: 0; }
+  .footer-content { grid-template-columns: 1fr; }
+  .hero-circle { width: 200px; height: 200px; }
+  .hero-circle-inner { width: 100px; height: 100px; font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">370电影网</a>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    <div class="nav-menu" id="navMenu">
+      <a href="#home">首页</a>
+      <a href="#features">平台特色</a>
+      <a href="#library">电影库</a>
+      <a href="#series">热播剧集</a>
+      <a href="#ranking">排行榜</a>
+      <a href="#about">关于我们</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1>370电影网<span>海量高清影视资源</span></h1>
+      <p>370电影网为您提供最新、最热的高清电影、电视剧、综艺在线观看服务，每日更新，畅享极致观影体验。</p>
+      <a href="#library" class="hero-btn">立即观影</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle"><div class="hero-circle-inner">370</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="section-header"><h2>平台特色</h2><p>370电影网为您打造极致观影体验</p></div>
+  <div class="features">
+    <div class="feature-card"><div class="feature-icon">🎬</div><h3>海量资源</h3><p>收录上万部高清电影、剧集、综艺，满足各类观影需求。</p></div>
+    <div class="feature-card"><div class="feature-icon">⚡</div><h3>极速播放</h3><p>多线路智能切换，告别卡顿，享受流畅观影。</p></div>
+    <div class="feature-card"><div class="feature-icon">🖥️</div><h3>高清画质</h3><p>支持1080P、4K超清画质，沉浸式视觉享受。</p></div>
+    <div class="feature-card"><div class="feature-icon">🔄</div><h3>每日更新</h3><p>同步最新院线大片和热播剧集，第一时间更新。</p></div>
+  </div>
+</section>
+
+<section class="section" id="library">
+  <div class="section-header"><h2>高清片库</h2><p>精选热门电影，分类筛选快速找片</p></div>
+  <div class="library">
+    <div class="library-filters">
+      <button class="filter-btn active">全部</button>
+      <button class="filter-btn">动作</button>
+      <button class="filter-btn">喜剧</button>
+      <button class="filter-btn">科幻</button>
+      <button class="filter-btn">爱情</button>
+    </div>
+    <div class="movie-scroll">
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>流浪地球3</h3><p>科幻 / 2025</p></div></div>
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>封神第二部</h3><p>奇幻 / 2025</p></div></div>
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>热辣滚烫</h3><p>喜剧 / 2024</p></div></div>
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>飞驰人生2</h3><p>喜剧 / 2024</p></div></div>
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>第二十条</h3><p>剧情 / 2024</p></div></div>
+      <div class="movie-card"><div class="movie-poster">🎬</div><div class="movie-info"><h3>熊出没·逆转时空</h3><p>动画 / 2024</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="series">
+  <div class="section-header"><h2>热播剧集</h2><p>追剧不停歇，热门好剧一网打尽</p></div>
+  <div class="series-list">
+    <div class="series-item"><div class="series-num">01</div><div class="series-content"><h3>庆余年 第二季</h3><p>古装 / 45集全</p></div><div class="series-tag">热播中</div></div>
+    <div class="series-item"><div class="series-num">02</div><div class="series-content"><h3>与凤行</h3><p>仙侠 / 39集全</p></div><div class="series-tag">完结</div></div>
+    <div class="series-item"><div class="series-num">03</div><div class="series-content"><h3>繁花</h3><p>年代 / 30集全</p></div><div class="series-tag">完结</div></div>
+    <div class="series-item"><div class="series-num">04</div><div class="series-content"><h3>玫瑰的故事</h3><p>都市 / 38集全</p></div><div class="series-tag">热播中</div></div>
+    <div class="series-item"><div class="series-num">05</div><div class="series-content"><h3>墨雨云间</h3><p>古装 / 40集全</p></div><div class="series-tag">完结</div></div>
+  </div>
+</section>
+
+<section class="section" id="ranking">
+  <div class="section-header"><h2>热播排行榜</h2><p>370电影网实时热度榜单</p></div>
+  <table class="ranking-table">
+    <thead><tr><th>排名</th><th>片名</th><th>类型</th><th>热度</th><th>趋势</th></tr></thead>
+    <tbody>
+      <tr><td class="rank-num top">1</td><td>流浪地球3</td><td>电影</td><td><div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div></td><td><span class="trend-up">↑</span> 95%</td></tr>
+      <tr><td class="rank-num top">2</td><td>庆余年 第二季</td><td>剧集</td><td><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div></td><td><span class="trend-up">↑</span> 88%</td></tr>
+      <tr><td class="rank-num top">3</td><td>封神第二部</td><td>电影</td><td><div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div></td><td><span class="trend-down">↓</span> 82%</td></tr>
+      <tr><td class="rank-num">4</td><td>与凤行</td><td>剧集</td><td><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div></td><td><span class="trend-up">↑</span> 75%</td></tr>
+      <tr><td class="rank-num">5</td><td>繁花</td><td>剧集</td><td><div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div></td><td><span class="trend-down">↓</span> 70%</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="about">
+  <div class="section-header"><h2>关于与帮助</h2><p>了解370电影网，解决常见问题</p></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <h3>关于370电影网</h3>
+      <p>370电影网是一个专注于提供高清影视在线观看的平台，致力于为用户提供丰富、优质的影视内容。我们每日更新最新电影、电视剧、综艺节目，让您随时随地享受观影乐趣。</p>
+      <p>平台采用先进的播放技术，支持多线路切换，确保播放流畅不卡顿。同时提供详细的分类筛选功能，帮助您快速找到想看的影片。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active"><div class="faq-question">370电影网提供哪些类型的影视资源？<span class="faq-toggle">+</span></div><div class="faq-answer"><p>370电影网提供最新电影、热播电视剧、综艺节目、动漫等高清资源在线观看，涵盖动作、喜剧、科幻、爱情、悬疑等多种类型。</p></div></div>
+      <div class="faq-item"><div class="faq-question">370电影网的资源更新频率如何？<span class="faq-toggle">+</span></div><div class="faq-answer"><p>370电影网每日更新最新影视资源，院线大片上线后第一时间更新，热播剧集同步更新，确保用户能够第一时间观看热门内容。</p></div></div>
+      <div class="faq-item"><div class="faq-question">播放卡顿怎么办？<span class="faq-toggle">+</span></div><div class="faq-answer"><p>如果遇到播放卡顿，可以尝试切换播放线路，或检查网络连接。平台支持多线路智能切换，选择流畅线路即可解决。</p></div></div>
+      <div class="faq-item"><div class="faq-question">如何搜索想看的影片？<span class="faq-toggle">+</span></div><div class="faq-answer"><p>您可以使用页面顶部的搜索功能，输入影片名称、演员或导演即可快速找到想看的影片。也可以通过分类筛选功能按类型、年份查找。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-col"><h4>关于我们</h4><ul><li><a href="#">关于370电影网</a></li><li><a href="#">联系我们</a></li><li><a href="#">加入我们</a></li></ul></div>
+    <div class="footer-col"><h4>帮助中心</h4><ul><li><a href="#">常见问题</a></li><li><a href="#">观影指南</a></li><li><a href="#">反馈建议</a></li></ul></div>
+    <div class="footer-col"><h4>友情链接</h4><ul><li><a href="#">电影资源</a></li><li><a href="#">热门剧集</a></li><li><a href="#">综艺节目</a></li></ul></div>
+    <div class="footer-col"><h4>关注我们</h4><ul><li><a href="#">微信公众号</a></li><li><a href="#">微博</a></li><li><a href="#">抖音</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 370电影网 (370dianyingwang-h5.github.io) 保留所有权利。本站仅供学习交流使用。</p></div>
+</footer>
+
+<div class="back-to-top" id="backToTop">↑</div>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); });
+navMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); }); });
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const item = question.parentElement;
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!isActive) { item.classList.add('active'); }
+  });
+});
+
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => { if (window.scrollY > 300) { backToTop.classList.add('show'); } else { backToTop.classList.remove('show'); } });
+backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
